@@ -1,0 +1,10 @@
+import cv2
+img=cv2.imread('../img/cat.jpg')
+print('原本圖像大小:', img.shape)
+up_img = cv2.pyrUp(img)
+print('up後的圖像:', up_img.shape)
+cv2.imshow('up',up_img)
+down_img = cv2.pyrDown(img)
+print('down後的圖像:', down_img.shape)
+cv2.imshow('down',down_img)
+cv2.waitKey()

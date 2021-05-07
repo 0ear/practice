@@ -1,0 +1,18 @@
+import cv2
+import numpy as np
+img = cv2.imread('../img/houses.jpg')
+img2=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imshow('img2',img2)
+a1=cv2.Sobel(img,cv2.CV_16S,1,0,ksize=1)
+print(a1)
+b1=cv2.Sobel(img,cv2.CV_16S,1,0,ksize=3)
+print('--'*80)
+print(b1)
+x1=cv2.convertScaleAbs(a1)
+cv2.imshow('x1',x1)
+x2=cv2.convertScaleAbs(b1)
+cv2.imshow('x3',x2)
+c1=cv2.Sobel(img,cv2.CV_16S,1,0,ksize=5)
+x3=cv2.convertScaleAbs(c1)
+cv2.imshow('x5',x3)
+cv2.waitKey(0)

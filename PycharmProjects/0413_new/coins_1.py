@@ -1,0 +1,21 @@
+import cv2
+image = cv2.imread('../img/coins2.png')
+def displayIMG(img, windowName):
+    cv2.namedWindow(windowName)
+    cv2.resizeWindow(windowName, 600, 600)
+    cv2.imshow(windowName, img)
+    cv2.waitKey()
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+cv2.imshow('Original', image)
+#displayIMG(image, 'Original')
+#print(image.shape)
+#r = 450.0/image.shape[0]
+#print(r)
+#dim = (int(image.shape[1]*r), 450)
+#print(dim)
+#resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+#displayIMG(image, 'Resized')
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+#displayIMG(gray, 'gray')
+cv2.imshow('gray', gray)
+cv2.waitKey()
