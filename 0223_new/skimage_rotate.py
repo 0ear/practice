@@ -1,0 +1,18 @@
+from skimage import transform, data, io
+import matplotlib.pyplot as plt
+img = data.camera()
+print(img.shape)
+io.imshow(img)
+io.show()
+img1 = transform.rotate(img, 60)
+print(img1.shape)
+io.imshow(img1)
+io.show()
+img1 = transform.rotate(img, 60, resize= True)
+print(img1.shape)
+io.imshow(img1)
+io.show()
+img1 = transform.rotate(img, -60, resize= True)
+print(img1.shape)
+io.imshow(img1)
+io.show()

@@ -1,0 +1,10 @@
+from skimage import data, exposure, img_as_float, io
+#image = img_as_float((data.moon()))
+image = io.imread('i.jpg')
+image = img_as_float(io.imread('i.jpg'))
+gam1 = exposure.adjust_gamma(image, 2)
+gam2 = exposure.adjust_gamma(image, 0.5)
+io.imshow(gam1)
+io.show()
+io.imshow(gam2)
+io.show()

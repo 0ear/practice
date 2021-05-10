@@ -1,0 +1,2 @@
+model_checkpoint_path: "myvgg16.weight"
+all_model_checkpoint_paths: "myvgg16.weight"
